@@ -1,4 +1,4 @@
-var caption = 'Mrugesh Rocks again!!';
+var caption = 'Improve your English to... (access more knowledge)';
 var captionLength = 0;
 
 
@@ -22,10 +22,30 @@ function type(){
 
     $("#caption").html(caption.substr(0,captionLength++));
     if(captionLength < caption.length + 1){
-        setTimeout('type()', 50);
+        setTimeout('type()', 100);
     }
     else{
         captionLength = 0;
+        testEarseEffect();
     }
 
+}
+
+function testEarseEffect(){
+    caption = $("#caption").html();
+    captionLength = caption.length;
+    if( captionLength > 0 ){
+        earse();
+    }
+}
+
+function earse(){
+    $("#caption").html(caption.substr(0,captionLength--));
+    if( captionLength >= 0 ){
+        setTimeout('earse()', 100);
+    }
+    else{
+        captionLength = 0;
+        type();
+    }
 }

@@ -1,7 +1,6 @@
 var CACHE_NAME = 'my-site-cache-v1';
 var urlsToCache = [
-  '/',
-  '/js/typewriter.js'
+  '/jQueyTypeWriterEffect/js/typewriter.js'
 ];
 
 self.addEventListener('install', function(event) {
